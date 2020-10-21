@@ -5,10 +5,7 @@ import requests
 
 
 class Server:
-        def A(self):
-                print("11111")
         def push(self,message):
-                print("ddd")
                 SCKEY = 'SCU108040Tf09c907000038959b4d698f31583067a5f26356cc656a'
                 now_time = datetime.datetime.now()
                 bj_time = now_time + datetime.timedelta(hours=8)
@@ -20,13 +17,14 @@ class Server:
 ```
 {bj_time.strftime("%Y-%m-%d %H:%M:%S %p")}
 ```
-### 打卡信息：
-```
-{message}
-```
-> 关于打卡信息
+### 最热帖子：
+"""
+                desp =desp+message
+                desp =desp+f"""
+
+> 其他
 >
-> 1、成功则打卡成功
+> 1、仅仅抓取第一页信息
 >
 > 2、系统异常则是打卡频繁
 
@@ -36,7 +34,7 @@ class Server:
 ```
 
 >
-> [GitHub项目地址](https://github.com/ReaJason/17wanxiaoCheckin-Actions) 
+> [CSDN博客](https://blog.csdn.net/qq_45197445) 
 >
 >期待你给项目的star✨
 """
@@ -48,7 +46,7 @@ class Server:
                 send_url = f"https://sc.ftqq.com/{SCKEY}.send"
 
                 params = {
-                    "text": f"完美校园健康打卡---{bj_time.strftime('%H:%M:%S')}",
+                    "text": f"52最新热帖---{bj_time.strftime('%Y-%m-%d')}",
                     "desp": desp
                 }
                     
