@@ -6,9 +6,11 @@ name: run
 # events but only for the main branch
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
+  schedule:
+    - cron: 20 12 * * *
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
