@@ -23,17 +23,12 @@ jobs:
         sudo apt update && \
         sudo apt install python3
       
-    - name: Pip install requests
+    - name: requirements
       run: |
-        sudo python -m pip install --upgrade --force pip 
-        sudo pip install setuptools==33.1.1
-        pip3 install requests
-        pip3 install bs4
-        pip3 install tqdm      
-         
-    - name: HealthCheckin
+        pip3 install -r requirements.txt
+        
+    - name: Checkin
       run: |
         python3 index.py <<EOF
         
         EOF
-        
