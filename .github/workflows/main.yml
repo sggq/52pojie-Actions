@@ -27,7 +27,7 @@ jobs:
       - name: requirements
         run: |
           pip3 install bs4 -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
-          pip3 install -r requirements.txt
+          pip3 install tqdm -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
       - name: checkout
         run: |
           python3 index.py
