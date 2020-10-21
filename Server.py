@@ -21,9 +21,7 @@ class Server:
 """
                 desp =desp+message
                 desp =desp+f"""
-
-> 其他
->
+### 其他
 > 1、仅仅抓取第一页信息
 >
 > 2、系统异常则是打卡频繁
