@@ -27,4 +27,4 @@ jobs:
         
     - name: Checkin
       run: |
-        python3 index.py
+        python index.py
