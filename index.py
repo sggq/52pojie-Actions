@@ -10,7 +10,7 @@ def main():
     sever = 'https://www.52pojie.cn/'
     soup = BeautifulSoup(html.text, 'html.parser')
     get = soup.find('div', class_='tl bm bmw')
-    geta = get.find_all('a', class_='xst')    
+    geta = soup.find_all('a', class_='xst')    
     # 返回信息封装组合
     count = 1
     for x in geta:
