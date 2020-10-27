@@ -9,7 +9,6 @@ def main():
     html = requests.get('https://www.52pojie.cn/forum.php?mod=guide&view=hot'+add)
     sever = 'https://www.52pojie.cn/'
     soup = BeautifulSoup(html.text, 'html.parser')
-    get = soup.find('div', class_='tl bm bmw')
     geta = soup.find_all('a', class_='xst')   
     
     # 返回信息封装组合
